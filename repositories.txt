@@ -1,0 +1,4 @@
+my-spring-app-1.3.0.jar | 1.3.0 | archiva.myproject.com
+my-spring-app-1.3.0.pom | 1.3.0 | archiva.myproject.com
+my-java-lib-1.0.0.jar | 2.0.0 | search.maven.org
+my-java-lib-1.0.0.pom | 2.0.0 | search.maven.org
