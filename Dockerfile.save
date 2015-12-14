@@ -1,0 +1,29 @@
+docker run --rm -v $PWD:/usr/src/kurento-java -w /usr/src/kurento-java -t maven:3.2-jdk-7 
+FROM maven:3.2-jdk-7
+
+#variable de entorno con el fichero de los repositorios
+ENV REPOSITORIES repositories.txt
+ENV EJECUTABLEJAVA VChecker-0.0.1-SNAPSHOT.jar
+
+
+#copiamos el entrypoint, el Vchecker y el fichero con los datos de los repositorios, artefactos y versiones
+
+#COPY entrypoint.sh /usr/src/kurento-java/
+#COPY VChecker-0.0.1-SNAPSHOT.jar /usr/src/kurento-java/
+#COPY repositories.txt /usr/src/kurento-java/
+#COPY kurento-settings-tfg.xml /usr/src/kurento-java/
+
+
+#
+# Set up of required permissions on script file 
+#
+
+to-java/kurento-settings-tfg.xml
+
+VOLUME /home/eu/TFG/ramaKurentoEu/kurento-java:/usr/src/kurento-java  
+
+WORKDIR /usr/src/kurento-java
+
+ENTRYPOINT bash -C './entrypoint.sh';'bash'
+
+
