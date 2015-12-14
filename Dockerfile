@@ -2,8 +2,9 @@
 FROM maven:3.3-jdk-7
 MAINTAINER Javier Cabezas Gívica y Eugenio F. González Martín 
 
-#variable de entorno con el fichero de los repositorios
+#Environment variable with repositories text file
 ENV REPOSITORIES repositories.txt
+#Environment variable with java jar file
 ENV JAVAJAR VChecker-0.0.1-SNAPSHOT.jar
 
 # Copying the work directory into /usr/src/mymaven/
